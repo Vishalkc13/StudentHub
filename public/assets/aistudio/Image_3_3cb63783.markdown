@@ -1,0 +1,272 @@
+---
+name: Academic Admin Studio
+colors:
+  surface: '#fbf8ff'
+  surface-dim: '#d7d7f8'
+  surface-bright: '#fbf8ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f4f2ff'
+  surface-container: '#eeecff'
+  surface-container-high: '#e7e6ff'
+  surface-container-highest: '#e0e0ff'
+  on-surface: '#171a31'
+  on-surface-variant: '#474554'
+  inverse-surface: '#2c2e47'
+  inverse-on-surface: '#f1efff'
+  outline: '#787586'
+  outline-variant: '#c8c4d7'
+  surface-tint: '#5646d7'
+  primary: '#4e3cce'
+  on-primary: '#ffffff'
+  primary-container: '#6758e8'
+  on-primary-container: '#f5f0ff'
+  inverse-primary: '#c6c0ff'
+  secondary: '#006c49'
+  on-secondary: '#ffffff'
+  secondary-container: '#6cf8bb'
+  on-secondary-container: '#00714d'
+  tertiary: '#7a4c00'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#9b6200'
+  on-tertiary-container: '#fff0e3'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#e4dfff'
+  primary-fixed-dim: '#c6c0ff'
+  on-primary-fixed: '#150066'
+  on-primary-fixed-variant: '#3e27bf'
+  secondary-fixed: '#6ffbbe'
+  secondary-fixed-dim: '#4edea3'
+  on-secondary-fixed: '#002113'
+  on-secondary-fixed-variant: '#005236'
+  tertiary-fixed: '#ffddb8'
+  tertiary-fixed-dim: '#ffb95f'
+  on-tertiary-fixed: '#2a1700'
+  on-tertiary-fixed-variant: '#653e00'
+  background: '#fbf8ff'
+  on-background: '#171a31'
+  surface-variant: '#e0e0ff'
+typography:
+  display-lg:
+    fontFamily: Manrope
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Manrope
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Manrope
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Manrope
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: -0.005em
+  title-md:
+    fontFamily: Manrope
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: DM Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: DM Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: DM Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.01em
+  label-lg:
+    fontFamily: DM Sans
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+    letterSpacing: 0.005em
+  label-md:
+    fontFamily: DM Sans
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: DM Sans
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.02em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+This design system establishes an elevated, contemporary administrative environment for institutional management. Striking an equilibrium between high-efficiency operational density and executive polish, the interface eliminates traditional academic software clutter in favor of a focused, premium SaaS aesthetic.
+
+### Core Character
+- **Institutional Authority, Modern Clarity:** Dignified and trustworthy without defaulting to bureaucratic stiffness.
+- **Calm Legibility:** High data density balanced by disciplined rhythm, gentle background warmth, and crisp contrast.
+- **Predictable Precision:** Systematic feedback states, deterministic modal flows, and transparent CRUD architectures tailored for administrative confidence.
+
+### Design Movement
+**Refined Contemporary SaaS**: Clean surfaces framed by fine structural hairlines, atmospheric tonal layers tinted with pale indigo-lavender, disciplined typography, and subdued drop shadows that project tactile depth without distraction.
+
+## Colors
+
+The palette leverages an authoritative deep iris primary set against soft, tinted neutral plains to soften glare across prolonged work sessions.
+
+### Functional Palette
+- **Canvas / Root Background:** `#F8F7FD` provides a calming tint that recedes beneath primary work planes.
+- **Card / Primary Surface:** `#FFFFFF` offers clear boundary definition and crisp readability.
+- **Subtle Surface & Pill Fills:** `#F1EFFF` serves as the neutral active state for navigation pills, hover states, and inactive progress tracks.
+- **Dividers & Outlines:** `#E2E0F5` creates low-contrast framing that sustains data structure without rigid visual noise.
+- **Text & Foreground:**
+  - Primary Titles & Headers: `#20223A` (Dark Navy)
+  - Secondary / Metadata / Muted Captions: `#64748B` (Muted Slate)
+- **Semantic Accents:**
+  - Success / Active Standing: `#10B981` (Emerald)
+  - Pending / Tuition Warnings: `#F59E0B` (Amber)
+  - Destructive / Expulsion / Alerts: `#EF4444` (Crimson Red)
+
+### Hierarchy and Application
+Never apply raw black (`#000000`) for text or structural borders. All structural lines must pull from the lavender tint (`#E2E0F5`), reserving `#6758E8` for interactive focal points, active state highlights, and primary system commitments.
+
+## Typography
+
+The typographic balance relies on two complementary typefaces:
+- **Display & Headings:** `Manrope` delivers geometric, structured authority. Its tight tracking and tall x-height make administrative statistics, metric boards, and module headings commanding yet friendly.
+- **Body & Data Displays:** `DM Sans` provides neutral, legible reading across extensive data grids, nested forms, and sidebars.
+
+### Typesetting Rules
+- Numeric metrics in dashboard scorecards should prioritize `Manrope SemiBold` or `Bold` with tabular figures enabled when aligning comparisons.
+- Table column headers utilize `label-sm` rendered in uppercase styling with a letter-spacing value of `0.05em` tinted in secondary slate (`#64748B`).
+- Avoid font weights beyond 700 to keep the dashboard lightweight and executive.
+
+## Layout & Spacing
+
+The layout model implements a fluid grid system driven by persistent structural navigation and responsive analytical working viewports.
+
+### Workspace Architecture
+- **Sidebar Navigation:** Fixed-width column (260px on desktop) anchored to the left viewport boundary. Transitions to a collapsible mini-rail (72px) on medium displays and an off-canvas drawer on viewports under 1024px.
+- **Content Canvas:** Fluid canvas with a maximum inner container constraint of `1600px` for ultra-wide monitors to avoid horizontal scan fatigue across large data tables.
+- **Grid Structure:** 12-column dynamic grid with a `1.5rem` (24px) baseline gutter. 
+  - Summary KPI cards span 3 columns each on standard desktop (4 cards per row), 6 columns on tablet (2x2), and full width (12 columns) on mobile.
+  - Data table modules, filter bars, and student profile headers command full 12-column spans.
+
+### Breakpoints
+- **Mobile (`< 768px`):** Single-column vertical stack, `1rem` margins, navigation off-canvas.
+- **Tablet (`768px – 1024px`):** Multi-column metric collapse, compact table density, collapsible sidebar rail.
+- **Desktop (`> 1024px`):** Unfolded layout with persistent sidebar, dual-column analytics, and expanded data grids.
+
+## Elevation & Depth
+
+Visual hierarchy combines low-contrast hairline borders with tinted, diffused atmospheric shadows, avoiding harsh Material-style drop shadows.
+
+### Elevation Levels
+
+- **Base Layer (Flat):** 
+  - Token: `elevation-0`
+  - Applied to the canvas (`#F8F7FD`) and inner table data rows. No shadow.
+- **Surface Elevation (Cards & Panels):**
+  - Token: `elevation-card`
+  - Construction: `box-shadow: 0 1px 3px rgba(32, 34, 58, 0.05), 0 8px 24px rgba(103, 88, 232, 0.04); border: 1px solid #E2E0F5;`
+  - Applied to all dashboard summary tiles, table containers, and filter utility belts.
+- **Hover & Action Elevation:**
+  - Token: `elevation-card-hover`
+  - Construction: `box-shadow: 0 4px 6px rgba(32, 34, 58, 0.06), 0 12px 28px rgba(103, 88, 232, 0.08); border: 1px solid #D5D1F2;`
+  - Applied to interactive metric cards, cursor-hovered table rows, and active dropdown items.
+- **Overlay & Modal Elevation:**
+  - Token: `elevation-modal`
+  - Construction: `box-shadow: 0 20px 40px -8px rgba(32, 34, 58, 0.12), 0 0 1px rgba(32, 34, 58, 0.2); border: 1px solid #E2E0F5;`
+  - Applied to CRUD dialogs, student dossier drawers, and contextual command palettes. Modals use a backdrop overlay of `rgba(32, 34, 58, 0.4)` paired with a `backdrop-filter: blur(4px)`.
+
+## Shapes
+
+The interface balances sharp administrative utility with softened interactive components to maintain an inviting, polished tone.
+
+### Shape Geometry Rules
+- **Container Surfaces (Cards, Modals, Tables):** `14px` border radius provides a soft outer silhouette for nested structures.
+- **Form Controls & Inputs:** `10px` border radius ensures inputs and select menus align with primary CTA buttons.
+- **Buttons (Primary, Secondary, Tertiary):** `10px` uniform border radius.
+- **Chips, Badges, Status Indicators:** `6px` to `8px` corner radius to frame short metadata without colliding with full-pill elements.
+- **Active Navigation Indicators & Avatars:** Fully circular/pill geometry (`9999px`) to visually separate structural items from navigational states.
+
+## Components
+
+### Buttons
+- **Primary:** Filled `#6758E8` background with pure `#FFFFFF` typography. Radius `10px`. Transitions on hover to `#5847E4` with `0 4px 12px rgba(103, 88, 232, 0.24)`.
+- **Secondary / Subtle:** `#F1EFFF` background, `#6758E8` text, no border. Transitions on hover to `#E8E4FD`.
+- **Outline:** `#FFFFFF` background with `1px solid #E2E0F5` border and `#20223A` text. Hover adds `#F8F7FD` background and `#6758E8` border.
+- **Destructive:** Subtle `#FEE2E2` background with `#EF4444` label. Primary destructive actions use filled `#EF4444` with `#FFFFFF` text.
+
+### Navigation Sidebar
+- Navigation links sit within vertical list containers spaced by `space-xs`.
+- **Default State:** Transparent background, `#64748B` icon and label, `10px` corner radius.
+- **Active State:** `#F1EFFF` background pill, `#6758E8` icon and typography, with a distinct vertical `3px` indicator bar docked along the left border in `#6758E8`.
+
+### Input Fields & Search Bars
+- Background `#FFFFFF`, border `1px solid #E2E0F5`, `10px` radius, padding `0.625rem 0.875rem`.
+- **Focus State:** Border changes to `#6758E8` paired with an outer focus ring `box-shadow: 0 0 0 3px rgba(103, 88, 232, 0.15)`.
+- Icon prefixes use `#64748B` slate icons aligned `12px` from the left edge.
+
+### Data Tables
+- Encased within an `elevation-card` container (`14px` radius, `#FFFFFF` fill, `#E2E0F5` border).
+- **Header Row:** Background `#F8F7FD`, text styled with `label-sm` uppercase `#64748B`, vertical height `44px`.
+- **Table Rows:** Base height `56px`, subtle bottom border `1px solid #F1EFFF`. Alternating colors are forbidden; use hover transition to `#F8F7FD` across the active row.
+- **Student Profile Cell:** Displays initials within an avatar circle (`36px` circle, `#F1EFFF` fill, `#6758E8` bold text) placed adjacent to the primary name (`title-md`) and student registration code (`body-sm`, `#64748B`).
+
+### Progress Bars (Academic Performance / Attendance)
+- Base track: `#F1EFFF` height `6px`, rounded `9999px`.
+- Active fill: Dynamic color allocation based on threshold (e.g., `< 75%` attendance uses `#EF4444`, `75–85%` uses `#F59E0B`, `> 85%` uses `#10B981`).
+
+### Status Badges & Chips
+- Padding: `4px 8px`, border radius `6px`, typography `label-sm`.
+- **Enrolled / Verified:** Text `#10B981`, Background `rgba(16, 185, 129, 0.1)`.
+- **Pending / Conditional:** Text `#F59E0B`, Background `rgba(245, 158, 11, 0.1)`.
+- **Suspended / Inactive:** Text `#EF4444`, Background `rgba(239, 68, 68, 0.1)`.
+
+### Summary Statistics Cards
+- Elevated card containing:
+  - Top: Icon framed in a `40px` rounded square (`#F1EFFF` background, `#6758E8` outline icon).
+  - Middle: KPI value in `Manrope 28px Bold` (`#20223A`).
+  - Bottom: Label in `DM Sans 13px Medium` (`#64748B`) paired with a pill badge for semester-over-semester percentage changes.
+
+### Modal Dialogs (CRUD Operations)
+- Centered overlay container (`14px` radius), max-width `540px` for standard single-column forms, `768px` for dual-column academic record forms.
+- Header features distinct separation with `1px solid #E2E0F5`, title `headline-sm`, and an explicit `#64748B` dismiss button.
+- Footer actions right-aligned with secondary dismiss and primary `#6758E8` commit button.

@@ -1,0 +1,6 @@
+{
+  "name": "StudentHub - Academic & Grade Management System",
+  "description": "Academic evaluation and grade entry workspace for faculty with student roster management, interactive marks calculation, real-time DBMS sync, and student portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

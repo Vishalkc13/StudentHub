@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#c6c0ff", "secondary-fixed-dim": "#4edea3", "on-surface-variant": "#474554", "surface-container-low": "#f4f2ff", "secondary-fixed": "#6ffbbe", "on-secondary-fixed": "#002113", "surface-dim": "#d7d7f8", "on-surface": "#171a31", "on-error-container": "#93000a", "on-secondary": "#ffffff", "on-tertiary-container": "#fff0e3", "surface-variant": "#e0e0ff", "on-secondary-fixed-variant": "#005236", "tertiary-fixed": "#ffddb8", "surface-container-highest": "#e0e0ff", "inverse-on-surface": "#f1efff", "surface-container": "#eeecff", "background": "#fbf8ff", "surface": "#fbf8ff", "on-error": "#ffffff", "tertiary-container": "#9b6200", "outline-variant": "#c8c4d7", "secondary-container": "#6cf8bb", "surface-tint": "#5646d7", "inverse-surface": "#2c2e47", "primary": "#4e3cce", "primary-fixed-dim": "#c6c0ff", "on-secondary-container": "#00714d", "tertiary-fixed-dim": "#ffb95f", "tertiary": "#7a4c00", "on-tertiary-fixed": "#2a1700", "on-tertiary-fixed-variant": "#653e00", "surface-bright": "#fbf8ff", "error": "#ba1a1a", "primary-container": "#6758e8", "surface-container-lowest": "#ffffff", "secondary": "#006c49", "on-primary-fixed-variant": "#3e27bf", "primary-fixed": "#e4dfff", "on-tertiary": "#ffffff", "outline": "#787586", "on-background": "#171a31", "surface-container-high": "#e7e6ff", "on-primary": "#ffffff", "on-primary-container": "#f5f0ff", "error-container": "#ffdad6", "on-primary-fixed": "#150066" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "2rem" }, "fontFamily": { "display-lg": [ "Manrope" ], "label-lg": [ "DM Sans" ], "label-md": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "headline-sm": [ "Manrope" ], "title-md": [ "Manrope" ], "headline-lg": [ "Manrope" ], "body-sm": [ "DM Sans" ], "headline-md": [ "Manrope" ], "label-sm": [ "DM Sans" ], "body-md": [ "DM Sans" ] }, "fontSize": { "display-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "title-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm"><img alt="StudentHub Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uz2Kh5sWBgY9gQjB_4Sl9oP9_YIuS5OszU9kHmIraidW2STvldh0ceZvyq5ZTY16WvRSS13Jyr3VEZNN7ZOj3wHjNyqVxuxFZsFiXSN4k0wJGLqahh4wA-fVrFOHkrHxJ0sTT-MrLHY8SR5LDe0B9NhDTrwvnfJFDRTxq2W2-J-MqDmTRfyUo2PiuAyJr56F2qyZv4vwkWObnhpstyWx22ICCQ2nW93peSfERavlkTLQE0IoIDvbo29HQ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate leading-none">StudentHub</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Student Management System</span></div></div><div class="px-space-md pt-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-xs">Navigation</span><nav class="flex flex-col gap-space-xs mt-space-xs" data-active-classes="bg-surface-container-low text-primary font-title-md font-semibold relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-1 before:bg-primary before:rounded-r"><a class="group flex items-center justify-between px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="group flex items-center justify-between px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="students" href="#"><span class="font-label-lg text-label-lg">Students</span><span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-primary font-medium">3</span></a><a aria-current="page" class="group flex items-center justify-between px-space-sm py-2.5 rounded-lg transition-all bg-surface-container-low text-primary font-title-md font-semibold relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-1 before:bg-primary before:rounded-r" data-path="teacher-workspace" href="#"><span class="font-label-lg text-label-lg">Teacher Workspace</span></a><a class="group flex items-center justify-between px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="student-portal" href="#"><span class="font-label-lg text-label-lg">Student Portal</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5"><div class="flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-md text-label-md font-medium text-on-surface truncate">MySQL Database: Connected</span></div><div class="flex flex-col font-label-sm text-label-sm text-on-surface-variant pl-4"><span class="truncate">localhost:3306</span><span class="font-mono text-outline truncate">db_studenthub</span></div></div><div class="flex flex-col px-space-xs text-left"><span class="font-label-sm text-label-sm text-on-surface font-medium">DBMS Mini Project 2026</span><span class="font-label-sm text-label-sm text-outline">MCA Dept. • v1.0.0</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[18px]">school</span><div class="flex items-center gap-1.5 font-label-md text-label-md"><span class="text-on-surface-variant">Academic Workspace</span><span class="text-outline-variant">/</span><span class="text-primary font-medium">MCA</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-2 px-space-sm py-1 rounded-full bg-secondary-container/20 text-on-secondary-container"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm font-medium">System Online</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden md:flex"><div class="flex items-center gap-1.5 justify-end"><span class="font-title-md text-title-md text-on-surface font-semibold">Vikas Kumar (VK)</span><span class="px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed-variant font-medium">Admin</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Student Records</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(0,0,0,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWgeFwct9I9TsG00HP2ws3sv37e070sLqciqZ1Ay0-Sue1wN44DF8SXziTpJb3ZGfwe7UHqkxqZbLZH-HfD4RDLJMzgFbn4cZhb_X9qGKjFvHLe-tptWuSAVIRyrPc8nJLOAxj8n4wCxrAUFrAjS_mtwO747SHD5RypB6za90HOuI2RD21PV3Am3SelRoLNggAomUtTxvUu-nk5pxA5ZdQ4-mp-YYaQ74bUa7DkO0dNAiVnjxkxNqF"/><a class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-1 rounded-lg hover:bg-surface-container" href="#" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary via-primary-container to-surface-tint p-space-lg text-on-primary shadow-xl mb-space-lg">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-48 h-48 rounded-full bg-primary-fixed-dim/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-surface-bright font-label-sm text-label-sm tracking-wide">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+            Full Edit &amp; CRUD Access Enabled
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+            Prof. Vikas Kumar (Faculty Coordinator, MCA)
+          </span>
+</div>
+<h1 class="font-display-lg text-display-lg tracking-tight font-bold text-on-primary">
+          Teacher Workspace: Grade Entry &amp; Evaluation
+        </h1>
+<p class="font-body-md text-body-md text-on-primary-container max-w-2xl">
+          Authorized grading portal for Master of Computer Applications (MCA) Semester III. Direct write privileges enabled for assessments, viva evaluation, and academic performance tracking.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg font-semibold shadow-md hover:bg-surface-container-low transition-all duration-200" id="addStudentTrigger">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+          + Add Student
+        </button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-label-lg text-label-lg font-semibold hover:bg-surface-container-lowest/30 transition-all duration-200" id="bulkEntryBtn">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+          Bulk Grade Entry
+        </button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-label-lg text-label-lg font-semibold hover:bg-surface-container-lowest/30 transition-all duration-200" id="exportCsvBtn">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+          Export Sheet (CSV)
+        </button>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm px-space-md rounded-xl shadow-sm mb-space-lg">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync_saved_locally</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">DBMS Transaction Status:</span>
+<span class="font-mono font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant">
+          Active Session: Teacher ID #TCH-8802 • autocommit=1
+        </span>
+</div>
+<div class="hidden md:flex items-center gap-1.5 text-outline text-label-sm font-label-sm">
+<span>Isolation: READ_COMMITTED</span>
+<span>•</span>
+<span>InnoDB Master Pool</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Real-Time Sync Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface-variant uppercase tracking-wider">Enrolled Students</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">3</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">MCA Batch 2026</span>
+</div>
+<div class="mt-3 flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>100% active roster attendance</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface-variant uppercase tracking-wider">Class Average</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">84.83%</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">+4.2%</span>
+</div>
+<div class="mt-3 flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 84.83%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface-variant uppercase tracking-wider">Pending Evaluations</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">0 / 3</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-medium">All Evaluated</span>
+</div>
+<div class="mt-3 flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>All grade sheets locked and recorded</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface-variant uppercase tracking-wider">Highest Score</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">91.00%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">A+</span>
+</div>
+<div class="mt-3 flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-tertiary">star</span>
+<span class="font-semibold text-on-surface truncate">Priya Sharma</span>
+<span class="text-outline font-mono">(MCA002)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-space-lg mb-space-lg">
+<div class="xl:col-span-3 bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">grade</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Interactive Grading &amp; Student Evaluation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Click on numerical values in the table to dynamically edit internal or end-term scores.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-stretch sm:self-auto justify-end">
+<span class="hidden text-secondary font-label-sm text-label-sm items-center gap-1" id="saveStatusIndicator">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Changes saved
+          </span>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold" id="recalculateBtn">
+<span class="material-symbols-outlined text-[16px]">calculate</span> Recalculate
+          </button>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 font-label-sm text-label-sm uppercase text-outline tracking-wider">
+<th class="py-3 px-space-md">Student</th>
+<th class="py-3 px-space-md">Roll No</th>
+<th class="py-3 px-space-md">Internal (40)</th>
+<th class="py-3 px-space-md">End-Term (60)</th>
+<th class="py-3 px-space-md">Total Marks (%)</th>
+<th class="py-3 px-space-md">Standing &amp; Grade</th>
+<th class="py-3 px-space-md text-right">Faculty Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-on-surface font-body-md text-body-md" id="gradeTableBody">
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-roll="MCA001">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant font-bold font-title-md">
+                    AK
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate student-name">Aarav Kumar</span>
+<span class="font-body-sm text-body-sm text-outline truncate">aarav.k@student.mca.edu</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-mono font-label-md text-label-md px-2 py-0.5 rounded-md bg-surface-container text-primary font-bold">MCA001</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="internal-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" max="40" min="0" type="number" value="34"/>
+<span class="text-outline font-label-sm text-label-sm">/40</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="external-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" max="60" min="0" type="number" value="51"/>
+<span class="text-outline font-label-sm text-label-sm">/60</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between">
+<span class="font-mono font-title-md text-title-md font-bold text-on-surface total-score">85.00%</span>
+<span class="font-body-sm text-body-sm text-outline total-raw">85/100</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full score-progress" style="width: 85%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="grade-badge inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/30 text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Outstanding
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="edit-quick-btn p-1.5 rounded-md hover:bg-surface-container text-primary transition-colors" title="Allowed for Faculty: Edit Full Dossier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="remarks-btn p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Add Faculty Remarks">
+<span class="material-symbols-outlined text-[18px]">chat_bubble_outline</span>
+</button>
+<button class="delete-btn p-1.5 rounded-md hover:bg-error-container text-error transition-colors" title="Delete Record (Generates Audit Trail)">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-roll="MCA002">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold font-title-md">
+                    PS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate student-name">Priya Sharma</span>
+<span class="font-body-sm text-body-sm text-outline truncate">priya.s@student.mca.edu</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-mono font-label-md text-label-md px-2 py-0.5 rounded-md bg-surface-container text-primary font-bold">MCA002</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="internal-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" max="40" min="0" type="number" value="38"/>
+<span class="text-outline font-label-sm text-label-sm">/40</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="external-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" max="60" min="0" type="number" value="53"/>
+<span class="text-outline font-label-sm text-label-sm">/60</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between">
+<span class="font-mono font-title-md text-title-md font-bold text-on-surface total-score">91.00%</span>
+<span class="font-body-sm text-body-sm text-outline total-raw">91/100</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full score-progress" style="width: 91%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="grade-badge inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                  A+ Distinction
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="edit-quick-btn p-1.5 rounded-md hover:bg-surface-container text-primary transition-colors" title="Allowed for Faculty: Edit Full Dossier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="remarks-btn p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Add Faculty Remarks">
+<span class="material-symbols-outlined text-[18px]">chat_bubble_outline</span>
+</button>
+<button class="delete-btn p-1.5 rounded-md hover:bg-error-container text-error transition-colors" title="Delete Record (Generates Audit Trail)">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-roll="MCA003">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold font-title-md">
+                    RV
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate student-name">Rohan Verma</span>
+<span class="font-body-sm text-body-sm text-outline truncate">rohan.v@student.mca.edu</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-mono font-label-md text-label-md px-2 py-0.5 rounded-md bg-surface-container text-primary font-bold">MCA003</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="internal-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" max="40" min="0" type="number" value="31"/>
+<span class="text-outline font-label-sm text-label-sm">/40</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="external-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" max="60" min="0" step="0.5" type="number" value="47.5"/>
+<span class="text-outline font-label-sm text-label-sm">/60</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between">
+<span class="font-mono font-title-md text-title-md font-bold text-on-surface total-score">78.50%</span>
+<span class="font-body-sm text-body-sm text-outline total-raw">78.5/100</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full score-progress" style="width: 78.5%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="grade-badge inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  First Class
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="edit-quick-btn p-1.5 rounded-md hover:bg-surface-container text-primary transition-colors" title="Allowed for Faculty: Edit Full Dossier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="remarks-btn p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Add Faculty Remarks">
+<span class="material-symbols-outlined text-[18px]">chat_bubble_outline</span>
+</button>
+<button class="delete-btn p-1.5 rounded-md hover:bg-error-container text-error transition-colors" title="Delete Record (Generates Audit Trail)">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">info</span>
+<span>Showing 3 of 3 enrolled students for MCA Advanced DBMS Lab (MCA-302)</span>
+</div>
+<div class="flex items-center gap-1 font-mono text-outline">
+<span>SQL: SELECT * FROM marks WHERE course_code = 'MCA302' FOR UPDATE;</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md font-bold">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+          Security &amp; Grant Matrix
+        </div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-semibold">Current Context</span>
+<span class="font-mono text-primary font-bold">ROLE_FACULTY_LEAD</span>
+</div>
+<div class="font-mono text-on-surface-variant text-[11px] leading-relaxed mt-1 p-2 rounded bg-surface-container-lowest">
+            Permission Level: Faculty/Admin (Write: ALL_TABLES, UPDATE: marks, INSERT: students, DELETE: with_audit_log)
+          </div>
+</div>
+<div class="flex flex-col gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-1 border-b border-surface-container">
+<span>Direct Mark Override</span>
+<span class="text-secondary font-semibold">GRANTED</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-container">
+<span>Student Deletion</span>
+<span class="text-secondary font-semibold">AUDITED</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-container">
+<span>Bulk CSV Import</span>
+<span class="text-secondary font-semibold">ALLOWED</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span>Lock Final Semester</span>
+<span class="text-tertiary font-semibold">PENDING_HOD</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Course Evaluation Weightage</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">MCA-302</span>
+</div>
+<div class="flex items-center justify-center p-2">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="40, 100" stroke-linecap="round" stroke-width="4.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="60, 100" stroke-dashoffset="-40" stroke-linecap="round" stroke-width="4.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">100</span>
+<span class="font-label-sm text-label-sm text-outline">Marks Total</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 font-label-sm text-label-sm">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+              Internal Continuous (40%)
+            </span>
+<span class="font-semibold text-on-surface">40 Marks</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              End-Term Theory &amp; Viva (60%)
+            </span>
+<span class="font-semibold text-on-surface">60 Marks</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-2.5">
+<div class="flex items-center gap-2 text-on-surface font-title-md text-title-md font-bold">
+<span class="material-symbols-outlined text-[18px] text-tertiary">history</span>
+          Recent Faculty Activity
+        </div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check</span>
+<div>
+<p class="font-semibold text-on-surface">Marks Updated for Priya Sharma</p>
+<p class="text-[11px] text-outline">Updated End-Term from 50 to 53 • 12 mins ago</p>
+</div>
+</div>
+<div class="flex items-start gap-2 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">edit_calendar</span>
+<div>
+<p class="font-semibold text-on-surface">Internal marks sheet verified</p>
+<p class="text-[11px] text-outline">Course MCA302 submitted to Examination Cell</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm hidden" id="addStudentModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-lg w-full overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-150">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">person_add</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Add Student to MCA Roster</h3>
+</div>
+<button class="p-1 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" id="closeAddStudentModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="p-space-md flex flex-col gap-4" id="addStudentForm">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Full Name</label>
+<input class="px-3 py-2 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md outline-none" id="newStudentName" placeholder="e.g. Ananya Roy" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Roll Number</label>
+<input class="px-3 py-2 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-mono text-body-md outline-none uppercase" id="newStudentRoll" placeholder="MCA004" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Semester</label>
+<select class="px-3 py-2 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md outline-none">
+<option selected="" value="3">Semester III</option>
+<option value="1">Semester I</option>
+<option value="2">Semester II</option>
+<option value="4">Semester IV</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Institutional Email</label>
+<input class="px-3 py-2 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md outline-none" id="newStudentEmail" placeholder="ananya.r@student.mca.edu" required="" type="email"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Initial Internal (Max 40)</label>
+<input class="px-3 py-2 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-mono text-body-md outline-none" id="newStudentInternal" max="40" min="0" type="number" value="30"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-medium text-on-surface">Initial End-Term (Max 60)</label>
+<input class="px-3 py-2 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-mono text-body-md outline-none" id="newStudentExternal" max="60" min="0" type="number" value="45"/>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">storage</span>
+<span>Action executes parameterized INSERT into <code class="text-primary font-mono font-bold">students</code> and <code class="text-primary font-mono font-bold">marks</code>.</span>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" id="cancelAddStudentBtn" type="button">
+            Cancel
+          </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-surface-tint shadow-md transition-all" type="submit">
+            Commit Student Record
+          </button>
+</div>
+</form>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm hidden" id="remarksModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-md w-full overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">rate_review</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Faculty Academic Remarks</h3>
+</div>
+<button class="p-1 rounded-lg text-outline hover:bg-surface-container transition-colors" id="closeRemarksModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-3">
+<p class="font-label-md text-label-md text-on-surface-variant" id="remarksStudentLabel">Entering notes for student...</p>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low border-0 focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md outline-none resize-none" id="remarksTextarea" placeholder="Enter evaluation remarks, practical laboratory assessment observations, or attendance alerts..." rows="4"></textarea>
+<div class="flex justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low" id="cancelRemarksBtn">Close</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-surface-tint shadow" id="saveRemarksBtn">Save Remarks</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    (function initTeacherPortal() {
+      function computeGradeInfo(internal, external) {
+        var total = Math.min(100, Math.max(0, internal + external));
+        var gradeLabel = 'Pass';
+        var gradeClass = 'bg-surface-container text-on-surface';
+        var iconHtml = '<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>';
+
+        if (total >= 90) {
+          gradeLabel = 'A+ Distinction';
+          gradeClass = 'bg-tertiary-container/20 text-tertiary';
+          iconHtml = '<span class="material-symbols-outlined text-[14px]">star</span>';
+        } else if (total >= 80) {
+          gradeLabel = 'Outstanding';
+          gradeClass = 'bg-secondary-container/30 text-on-secondary-container';
+          iconHtml = '<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>';
+        } else if (total >= 70) {
+          gradeLabel = 'First Class';
+          gradeClass = 'bg-primary-fixed text-on-primary-fixed-variant';
+          iconHtml = '<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>';
+        } else if (total >= 50) {
+          gradeLabel = 'Second Class';
+          gradeClass = 'bg-surface-variant text-on-surface-variant';
+          iconHtml = '<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>';
+        } else {
+          gradeLabel = 'Conditional / Fail';
+          gradeClass = 'bg-error-container text-on-error-container';
+          iconHtml = '<span class="material-symbols-outlined text-[14px]">warning</span>';
+        }
+        return { total: total, gradeLabel: gradeLabel, gradeClass: gradeClass, iconHtml: iconHtml };
+      }
+
+      function updateRow(row) {
+        var internalInput = row.querySelector('.internal-input');
+        var externalInput = row.querySelector('.external-input');
+        var totalScoreEl = row.querySelector('.total-score');
+        var totalRawEl = row.querySelector('.total-raw');
+        var scoreProgress = row.querySelector('.score-progress');
+        var gradeBadge = row.querySelector('.grade-badge');
+
+        var internal = parseFloat(internalInput.value) || 0;
+        var external = parseFloat(externalInput.value) || 0;
+
+        if (internal > 40) { internal = 40; internalInput.value = 40; }
+        if (internal < 0) { internal = 0; internalInput.value = 0; }
+        if (external > 60) { external = 60; externalInput.value = 60; }
+        if (external < 0) { external = 0; externalInput.value = 0; }
+
+        var result = computeGradeInfo(internal, external);
+        totalScoreEl.textContent = result.total.toFixed(2) + '%';
+        totalRawEl.textContent = result.total + '/100';
+        scoreProgress.style.width = result.total + '%';
+
+        gradeBadge.className = 'grade-badge inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold ' + result.gradeClass;
+        gradeBadge.innerHTML = result.iconHtml + ' ' + result.gradeLabel;
+
+        showSaveIndicator();
+      }
+
+      function showSaveIndicator() {
+        var indicator = document.getElementById('saveStatusIndicator');
+        if (!indicator) return;
+        indicator.classList.remove('hidden');
+        indicator.classList.add('inline-flex');
+        clearTimeout(indicator._timeout);
+        indicator._timeout = setTimeout(function() {
+          indicator.classList.add('hidden');
+          indicator.classList.remove('inline-flex');
+        }, 1800);
+      }
+
+      var tableBody = document.getElementById('gradeTableBody');
+
+      tableBody.addEventListener('input', function(e) {
+        if (e.target.classList.contains('internal-input') || e.target.classList.contains('external-input')) {
+          var row = e.target.closest('tr');
+          if (row) updateRow(row);
+        }
+      });
+
+      var addStudentModal = document.getElementById('addStudentModal');
+      var addStudentTrigger = document.getElementById('addStudentTrigger');
+      var closeAddStudentModal = document.getElementById('closeAddStudentModal');
+      var cancelAddStudentBtn = document.getElementById('cancelAddStudentBtn');
+      var addStudentForm = document.getElementById('addStudentForm');
+
+      function openModal() {
+        addStudentModal.classList.remove('hidden');
+      }
+      function closeModal() {
+        addStudentModal.classList.add('hidden');
+        addStudentForm.reset();
+      }
+
+      if (addStudentTrigger) addStudentTrigger.addEventListener('click', openModal);
+      if (closeAddStudentModal) closeAddStudentModal.addEventListener('click', closeModal);
+      if (cancelAddStudentBtn) cancelAddStudentBtn.addEventListener('click', closeModal);
+
+      if (addStudentForm) {
+        addStudentForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var name = document.getElementById('newStudentName').value.trim();
+          var roll = document.getElementById('newStudentRoll').value.trim().toUpperCase();
+          var email = document.getElementById('newStudentEmail').value.trim();
+          var internalVal = parseFloat(document.getElementById('newStudentInternal').value) || 0;
+          var externalVal = parseFloat(document.getElementById('newStudentExternal').value) || 0;
+
+          var initials = name.split(' ').map(function(n) { return n[0]; }).slice(0, 2).join('').toUpperCase() || 'ST';
+          var calc = computeGradeInfo(internalVal, externalVal);
+
+          var newRow = document.createElement('tr');
+          newRow.className = 'hover:bg-surface-container-low/50 transition-colors group';
+          newRow.setAttribute('data-roll', roll);
+          newRow.innerHTML = 
+            '<td class="py-3.5 px-space-md">' +
+              '<div class="flex items-center gap-3">' +
+                '<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold font-title-md">' + initials + '</div>' +
+                '<div class="flex flex-col min-w-0">' +
+                  '<span class="font-title-md text-title-md text-on-surface font-semibold truncate student-name">' + name + '</span>' +
+                  '<span class="font-body-sm text-body-sm text-outline truncate">' + email + '</span>' +
+                '</div>' +
+              '</div>' +
+            '</td>' +
+            '<td class="py-3.5 px-space-md">' +
+              '<span class="font-mono font-label-md text-label-md px-2 py-0.5 rounded-md bg-surface-container text-primary font-bold">' + roll + '</span>' +
+            '</td>' +
+            '<td class="py-3.5 px-space-md">' +
+              '<div class="flex items-center gap-1.5">' +
+                '<input type="number" min="0" max="40" value="' + internalVal + '" class="internal-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" />' +
+                '<span class="text-outline font-label-sm text-label-sm">/40</span>' +
+              '</div>' +
+            '</td>' +
+            '<td class="py-3.5 px-space-md">' +
+              '<div class="flex items-center gap-1.5">' +
+                '<input type="number" min="0" max="60" value="' + externalVal + '" class="external-input w-16 px-2 py-1 rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary text-on-surface font-mono font-semibold text-center outline-none transition-all" />' +
+                '<span class="text-outline font-label-sm text-label-sm">/60</span>' +
+              '</div>' +
+            '</td>' +
+            '<td class="py-3.5 px-space-md">' +
+              '<div class="flex flex-col gap-1 w-28">' +
+                '<div class="flex items-center justify-between">' +
+                  '<span class="font-mono font-title-md text-title-md font-bold text-on-surface total-score">' + calc.total.toFixed(2) + '%</span>' +
+                  '<span class="font-body-sm text-body-sm text-outline total-raw">' + calc.total + '/100</span>' +
+                '</div>' +
+                '<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">' +
+                  '<div class="bg-secondary h-full rounded-full score-progress" style="width: ' + calc.total + '%"></div>' +
+                '</div>' +
+              '</div>' +
+            '</td>' +
+            '<td class="py-3.5 px-space-md">' +
+              '<span class="grade-badge inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold ' + calc.gradeClass + '">' +
+                calc.iconHtml + ' ' + calc.gradeLabel +
+              '</span>' +
+            '</td>' +
+            '<td class="py-3.5 px-space-md text-right">' +
+              '<div class="flex items-center justify-end gap-1">' +
+                '<button class="edit-quick-btn p-1.5 rounded-md hover:bg-surface-container text-primary transition-colors" title="Allowed for Faculty: Edit Full Dossier">' +
+                  '<span class="material-symbols-outlined text-[18px]">edit</span>' +
+                '</button>' +
+                '<button class="remarks-btn p-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Add Faculty Remarks">' +
+                  '<span class="material-symbols-outlined text-[18px]">chat_bubble_outline</span>' +
+                '</button>' +
+                '<button class="delete-btn p-1.5 rounded-md hover:bg-error-container text-error transition-colors" title="Delete Record (Generates Audit Trail)">' +
+                  '<span class="material-symbols-outlined text-[18px]">delete</span>' +
+                '</button>' +
+              '</div>' +
+            '</td>';
+
+          tableBody.appendChild(newRow);
+          closeModal();
+          showSaveIndicator();
+        });
+      }
+
+      var remarksModal = document.getElementById('remarksModal');
+      var remarksStudentLabel = document.getElementById('remarksStudentLabel');
+      var remarksTextarea = document.getElementById('remarksTextarea');
+      var closeRemarksModal = document.getElementById('closeRemarksModal');
+      var cancelRemarksBtn = document.getElementById('cancelRemarksBtn');
+      var saveRemarksBtn = document.getElementById('saveRemarksBtn');
+      var activeRemarksRow = null;
+
+      function openRemarks(row) {
+        activeRemarksRow = row;
+        var name = row.querySelector('.student-name').textContent;
+        var roll = row.getAttribute('data-roll');
+        remarksStudentLabel.textContent = 'Feedback & assessment commentary for ' + name + ' (' + roll + ')';
+        remarksTextarea.value = row.dataset.remarks || '';
+        remarksModal.classList.remove('hidden');
+      }
+
+      function closeRemarks() {
+        remarksModal.classList.add('hidden');
+        activeRemarksRow = null;
+      }
+
+      if (closeRemarksModal) closeRemarksModal.addEventListener('click', closeRemarks);
+      if (cancelRemarksBtn) cancelRemarksBtn.addEventListener('click', closeRemarks);
+
+      if (saveRemarksBtn) {
+        saveRemarksBtn.addEventListener('click', function() {
+          if (activeRemarksRow) {
+            activeRemarksRow.dataset.remarks = remarksTextarea.value;
+            showSaveIndicator();
+          }
+          closeRemarks();
+        });
+      }
+
+      tableBody.addEventListener('click', function(e) {
+        var delBtn = e.target.closest('.delete-btn');
+        if (delBtn) {
+          var row = delBtn.closest('tr');
+          var roll = row.getAttribute('data-roll');
+          var name = row.querySelector('.student-name').textContent;
+          if (confirm('Audit Action: Are you sure you want to delete ' + name + ' (' + roll + ') from the grading roster? This writes to audit_logs.')) {
+            row.remove();
+            showSaveIndicator();
+          }
+          return;
+        }
+
+        var remBtn = e.target.closest('.remarks-btn');
+        if (remBtn) {
+          var rowRem = remBtn.closest('tr');
+          openRemarks(rowRem);
+          return;
+        }
+
+        var editQuick = e.target.closest('.edit-quick-btn');
+        if (editQuick) {
+          var rowEdit = editQuick.closest('tr');
+          var intInput = rowEdit.querySelector('.internal-input');
+          intInput.focus();
+          intInput.select();
+        }
+      });
+
+      var bulkEntryBtn = document.getElementById('bulkEntryBtn');
+      if (bulkEntryBtn) {
+        bulkEntryBtn.addEventListener('click', function() {
+          alert('Bulk Grade Entry Mode: Tab through Internal and End-term fields sequentially. All modifications are tracked under Faculty ID #TCH-8802.');
+          var firstInput = document.querySelector('.internal-input');
+          if (firstInput) firstInput.focus();
+        });
+      }
+
+      var exportCsvBtn = document.getElementById('exportCsvBtn');
+      if (exportCsvBtn) {
+        exportCsvBtn.addEventListener('click', function() {
+          var rows = document.querySelectorAll('#gradeTableBody tr');
+          var csv = 'Roll_No,Student_Name,Internal_40,EndTerm_60,Total_100,Grade\n';
+          rows.forEach(function(r) {
+            var roll = r.getAttribute('data-roll') || '';
+            var name = r.querySelector('.student-name') ? r.querySelector('.student-name').textContent : '';
+            var internal = r.querySelector('.internal-input') ? r.querySelector('.internal-input').value : '';
+            var external = r.querySelector('.external-input') ? r.querySelector('.external-input').value : '';
+            var total = r.querySelector('.total-score') ? r.querySelector('.total-score').textContent.replace('%', '') : '';
+            var grade = r.querySelector('.grade-badge') ? r.querySelector('.grade-badge').textContent.trim() : '';
+            csv += [roll, '"' + name + '"', internal, external, total, '"' + grade + '"'].join(',') + '\n';
+          });
+          var blob = new Blob([csv], { type: 'text/csv' });
+          var url = window.URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.setAttribute('href', url);
+          a.setAttribute('download', 'MCA302_Grades_Master.csv');
+          a.click();
+        });
+      }
+
+      var recalculateBtn = document.getElementById('recalculateBtn');
+      if (recalculateBtn) {
+        recalculateBtn.addEventListener('click', function() {
+          var rows = document.querySelectorAll('#gradeTableBody tr');
+          rows.forEach(function(r) { updateRow(r); });
+          showSaveIndicator();
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
